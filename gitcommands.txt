@@ -1,0 +1,76 @@
+    1  git clone https://github.com/azharudeenjaferali/TestRepository.git
+    2  git status
+    3  git -version
+    4  git -v
+    5  clear
+    6  git pull
+    7  cd TestRepository/
+    8  git pull
+    9  history
+   10  ls
+   11  cd TestRepository/
+   12  ls
+   13  cd src/
+   14  ls
+   15  history
+   16  ls -a
+   17  cd ..
+   18  cd ..
+   19  ls
+   20  history
+   21  git add *
+   22  git status
+   23  git init
+   24  git init
+   25  git add .
+   26  git status
+   27  git commit -m "TestNG FrameWork"
+   28  git remote add origin https://github.com/Anandhaqa/TestNG.git
+   29  git branch
+   30  git push origin master
+   31  history
+   32  history>history1.txt
+   33  cls
+   34  clear
+   35  git branch -a
+   36  ls
+   37  git branch -a
+   38  git branch -a
+   39  git pull
+   40  git branch -a
+   41  git checkout Test01
+   42  git branch -a
+   43  git checkout master
+   44  git branch -a
+   45  git diff Test01
+   46  git pull
+   47  git checkout Test01
+   48  git pull
+   49  git diff master
+   50  git checkout master
+   51  git diff Test01
+   52  git merge Test01
+   53  git diff Test01
+   54  git status
+   55  git add .
+   56  git commit -m "Histort.txt"
+   57  git push origin master
+   58  history
+   59  history>historyFinal
+   60  history>historyFinal.txt
+   61  ls
+   62  git init
+   63  git status
+   64  git add .
+   65  git status
+   66  git commit -m "August Month Project"
+   67  git status
+   68  git push origin main
+   69  git remote add origin https://github.com/Anandhaqa/August_Project.git
+   70  git status
+   71  git push origin main
+   72  git branch -M main
+   73  git remote add origin https://github.com/Anandhaqa/August_Project.git
+   74  git push origin main
+   75  history
+   76  history>gitcommands.txt
