@@ -1,0 +1,47 @@
+package com.fai.pageexecution;
+
+import java.io.IOException;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.fai.basepackage.BaseClass;
+import com.fai.pagefactory.Page_Data;
+
+public class Amazon_Service {
+	
+	@BeforeMethod
+	public void bmethod() throws IOException {
+		BaseClass.blaunch();
+		BaseClass.loadurl(BaseClass.proFile("url"));
+	}
+	
+	@AfterMethod
+	public void amethod() throws InterruptedException {
+		Thread.sleep(5000);
+		BaseClass.close();
+	}
+	
+	@Test(dependsOnMethods = {"aws"})
+	public void amazon_sceience() throws IOException, InterruptedException {
+		//BaseClass.blaunch();
+		//BaseClass.loadurl(BaseClass.proFile("url"));
+		Page_Data pd = new Page_Data();
+		pd.Amazon_Science.click();
+		//Thread.sleep(5000);
+		//BaseClass.close();
+	}
+	
+	@Test
+	public void aws() throws IOException, InterruptedException {
+		//BaseClass.blaunch();
+		//BaseClass.loadurl(BaseClass.proFile("url"));
+		Page_Data pd = new Page_Data();
+		pd.aws.click();
+		//Thread.sleep(5000);
+		//BaseClass.close();
+	}
+	
+
+}

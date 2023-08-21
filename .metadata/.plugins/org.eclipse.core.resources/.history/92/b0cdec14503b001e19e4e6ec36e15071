@@ -1,0 +1,68 @@
+package com.fai.pageexecution;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.fai.basepackage.BaseClass;
+import com.fai.pagefactory.Page_Data;
+
+public class Amazon_Service {
+	
+	@BeforeClass
+	public void db_connection() {
+		System.out.println("DB_Connected");
+	}
+	
+	@AfterClass
+	public void db_close() {
+		System.out.println("DB_Disconnected");
+	}
+	
+	@BeforeMethod
+	public void bmethod() throws IOException {
+		BaseClass.blaunch();
+		BaseClass.loadurl(BaseClass.proFile("url"));
+	}
+	
+	@AfterMethod
+	public void amethod() throws InterruptedException {
+		Thread.sleep(5000);
+		BaseClass.close();
+	}
+	
+	@Test(dependsOnMethods = {"com.fai.pageexecution.Amazon_Service.aws", "com.fai.pageexecution.Amazon_Service.career"})
+	public void amazon_sceience() throws IOException, InterruptedException {
+		//BaseClass.blaunch();
+		//BaseClass.loadurl(BaseClass.proFile("url"));
+		Page_Data pd = new Page_Data();
+		pd.Amazon_Science.click();
+		//Thread.sleep(5000);
+		//BaseClass.close();
+	}
+	
+	@Test
+	public void aws() throws IOException, InterruptedException {
+		//BaseClass.blaunch();
+		//BaseClass.loadurl(BaseClass.proFile("url"));
+		Page_Data pd = new Page_Data();
+		pd.aws.click();
+		//System.out.println(2/0);
+		//Thread.sleep(5000);
+		//BaseClass.close();
+	}
+	
+	@Test
+	
+	public void career() throws InterruptedException {
+		Page_Data pd = new Page_Data();
+		pd.career.click();
+		
+	}
+	
+}

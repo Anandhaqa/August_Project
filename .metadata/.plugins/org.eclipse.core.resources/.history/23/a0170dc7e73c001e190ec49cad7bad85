@@ -1,0 +1,27 @@
+package com.fai.pageexecution;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import com.fai.basepackage.BaseClass;
+
+public class Wallmart_Services {
+	
+	@Test
+	public void deals() {
+		BaseClass.blaunch();
+		try {
+			BaseClass.loadurl(BaseClass.excelRead(58, 1));
+			Thread.sleep(3000);
+			BaseClass.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

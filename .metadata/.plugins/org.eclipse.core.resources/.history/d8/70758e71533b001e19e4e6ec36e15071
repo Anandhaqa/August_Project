@@ -1,0 +1,62 @@
+package com.fai.pageexecution;
+
+import java.io.IOException;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.fai.basepackage.BaseClass;
+import com.fai.pagefactory.Page_Data;
+
+public class PageExecution {
+	
+	@Test(dependsOnMethods = {"laptops"})
+	public void place_Order() throws IOException, InterruptedException {
+		Page_Data pd = new Page_Data();
+		pd.Cart_Click.click();
+		Thread.sleep(5000);
+		pd.Place_Order.click();
+		Thread.sleep(5000);
+		pd.name_Place_Order.sendKeys(BaseClass.excelRead(48, 1));
+		pd.Country.sendKeys(BaseClass.excelRead(49, 1));
+		pd.City.sendKeys(BaseClass.excelRead(50, 1));
+		pd.CC_Card.sendKeys(BaseClass.excelRead(51, 1));
+		pd.Month.sendKeys(BaseClass.excelRead(52, 1));
+		pd.Year.sendKeys(BaseClass.excelRead(53, 1));
+		pd.Purchase.click();
+		BaseClass.takeScreenShot();
+		Thread.sleep(5000);
+		BaseClass.close();
+	}
+	@Test(dependsOnMethods = {"login"})
+	public void laptops() throws IOException, InterruptedException {
+		Page_Data pd = new Page_Data();
+		pd.Laptops.click();
+		Thread.sleep(5000);
+		pd.nextpg.click();
+		Thread.sleep(5000);
+		pd.MacBook.click();
+		Thread.sleep(5000);
+		pd.addtocart.click();
+		Thread.sleep(5000);
+		BaseClass.alert();
+	}
+	
+	/*@Test
+	public void close() {
+		BaseClass.close();
+	}*/
+	
+	@Test
+	public void login() throws IOException, InterruptedException {
+		BaseClass.blaunch();
+		BaseClass.loadurl(BaseClass.excelRead(44, 1));
+		Page_Data pd = new Page_Data();
+		pd.Login.click();
+		Thread.sleep(5000);
+		pd.U_Name.sendKeys(BaseClass.excelRead(45, 1));
+		pd.password.sendKeys(BaseClass.excelRead(46, 1));
+		pd.Loginbtn.click();
+		Thread.sleep(3000);
+	}
+}
