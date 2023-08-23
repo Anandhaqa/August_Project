@@ -1,0 +1,108 @@
+    1  git clone https://github.com/azharudeenjaferali/TestRepository.git
+    2  git status
+    3  git -version
+    4  git -v
+    5  clear
+    6  git pull
+    7  cd TestRepository/
+    8  git pull
+    9  history
+   10  ls
+   11  cd TestRepository/
+   12  ls
+   13  cd src/
+   14  ls
+   15  history
+   16  ls -a
+   17  cd ..
+   18  cd ..
+   19  ls
+   20  history
+   21  git add *
+   22  git status
+   23  git init
+   24  git init
+   25  git add .
+   26  git status
+   27  git commit -m "TestNG FrameWork"
+   28  git remote add origin https://github.com/Anandhaqa/TestNG.git
+   29  git branch
+   30  git push origin master
+   31  history
+   32  history>history1.txt
+   33  cls
+   34  clear
+   35  git branch -a
+   36  ls
+   37  git branch -a
+   38  git branch -a
+   39  git pull
+   40  git branch -a
+   41  git checkout Test01
+   42  git branch -a
+   43  git checkout master
+   44  git branch -a
+   45  git diff Test01
+   46  git pull
+   47  git checkout Test01
+   48  git pull
+   49  git diff master
+   50  git checkout master
+   51  git diff Test01
+   52  git merge Test01
+   53  git diff Test01
+   54  git status
+   55  git add .
+   56  git commit -m "Histort.txt"
+   57  git push origin master
+   58  history
+   59  history>historyFinal
+   60  history>historyFinal.txt
+   61  ls
+   62  git init
+   63  git status
+   64  git add .
+   65  git status
+   66  git commit -m "August Month Project"
+   67  git status
+   68  git push origin main
+   69  git remote add origin https://github.com/Anandhaqa/August_Project.git
+   70  git status
+   71  git push origin main
+   72  git branch -M main
+   73  git remote add origin https://github.com/Anandhaqa/August_Project.git
+   74  git push origin main
+   75  history
+   76  history>gitcommands.txt
+   77  git branch -a
+   78  git pull
+   79  git branch -a
+   80  git status
+   81  git checkout Sub_Branch_01
+   82  git branch -a
+   83  git checkout main
+   84  git branch -a
+   85  git diff Sub_Branch_01
+   86  git pull
+   87  git diff Sub_Branch_01
+   88  git diff main
+   89  git status
+   90  git add .
+   91  git commit -m "History of Commands"
+   92  git push origin main
+   93  git status
+   94  git diff Sub_Branch_01 
+   95  history
+   96  git merge Sub_Branch_01
+   97  git status
+   98  git diff Sub_Branch_01 
+   99  git status
+  100  git checkout Sub_Branch_01 
+  101  git pull
+  102  git diff main
+  103  git merge Sub_Branch_01 
+  104  git merge main
+  105  git commit -m "Git Commands"
+  106  git push .
+  107  git checkout main
+  108  history>History.txt
